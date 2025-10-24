@@ -7,7 +7,7 @@ use alcamo\exception\Unsupported;
 /**
  * @brief Iterator reading lines from a file pointer
  *
- * key() returns the current line number, starting at 1. If the `SKIP_EMPTY`
+ * key() returns the current line number, starting at 1. If the SKIP_EMPTY
  * flag is used, empty lines are skipped and are not counted in the line
  * numbering.
  *
@@ -27,9 +27,9 @@ class InputStreamLineIterator implements \Iterator
     private $flags_;  ///< OR-combination of the above constants
 
     /**
-     * @param $stream File pointer
+     * @param $stream File pointer.
      *
-     * @param $flags Bitwise or of the above class constants
+     * @param $flags OR-combination of the above class constants.
      */
     public function __construct($stream, ?int $flags = null)
     {
@@ -73,6 +73,7 @@ class InputStreamLineIterator implements \Iterator
      * @brief Read a line, if possible
      *
      * @return The line read, or `null` if eof or any other low-level error
+     * occurs.
      */
     protected function readLine(): ?string
     {
