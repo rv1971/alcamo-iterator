@@ -21,3 +21,5 @@ This will output its own source file with line numbers.
   an input stream. Flags can be given e.g. to skip empty
   lines. Derived classes can easily add other features such as
   skipping comment lines.
+* `FnmatchFilterIterator` is a filter iterator that filters filenames
+  using `fnmatch()`.
